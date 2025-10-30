@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Media Gallery</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="brand">Private Media Gallery</div>
+        <nav class="main-nav">
+            <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter-btn" data-filter="image" aria-pressed="false">Images</button>
+            <button class="filter-btn" data-filter="video" aria-pressed="false">Videos</button>
+        </nav>
+    </header>
+
+    <main class="site-main">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to Your Gallery</h1>
+                <p>Keep your personal media organized in one private, responsive space. Add new memories anytime.</p>
+                <a class="cta" href="#gallery">Browse Collection</a>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery" aria-label="Media Gallery">
+            <div class="gallery-grid">
+                <article class="card" data-type="image">
+                    <div class="media-wrapper">
+                        <img src="assets/images/sample-image-01.jpg" alt="Sample gallery image placeholder">
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">Sample Image 01</h2>
+                        <p class="card-meta">Add your description here to remember why this image matters.</p>
+                    </div>
+                </article>
+
+                <article class="card" data-type="video">
+                    <div class="media-wrapper">
+                        <video controls preload="metadata">
+                            <source src="assets/video/video02.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">테스트 비디오</h2>
+                        <p class="card-meta">현재 assets/video/video02.mp4 파일을 재생 중입니다. 다른 파일을 추가할 때는 경로와 이름을 맞춰주세요.</p>
+                    </div>
+                </article>
+
+                <article class="card" data-type="image">
+                    <div class="media-wrapper">
+                        <img src="assets/images/sample-image-02.jpg" alt="Sample gallery image placeholder">
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">Sample Image 02</h2>
+                        <p class="card-meta">Organize images with clear titles and notes for quick recall.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="notes" aria-label="Gallery Notes">
+            <h2>Organize Your Assets</h2>
+            <ul>
+                <li>Store images in <code>assets/images</code> and videos in <code>assets/video</code>.</li>
+                <li>Update file paths and descriptions in this page to match your media.</li>
+                <li>Use the filter buttons to quickly focus on images or videos.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="copyright-year"></span> Private Media Gallery. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
